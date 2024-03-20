@@ -12,6 +12,7 @@
 		BCAEC1932BAABD9A007CAA5A /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEC1922BAABD9A007CAA5A /* EssentialFeedTests.swift */; };
 		BCAEC1942BAABD9A007CAA5A /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAEC1862BAABD9A007CAA5A /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCAEC1A02BAABFC2007CAA5A /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEC19F2BAABFC2007CAA5A /* FeedItem.swift */; };
+		BCAEC1A22BAAC056007CAA5A /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEC1A12BAAC056007CAA5A /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		BCAEC18D2BAABD9A007CAA5A /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAEC1922BAABD9A007CAA5A /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		BCAEC19F2BAABFC2007CAA5A /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		BCAEC1A12BAAC056007CAA5A /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				BCAEC1862BAABD9A007CAA5A /* EssentialFeed.h */,
 				BCAEC1872BAABD9A007CAA5A /* EssentialFeed.docc */,
 				BCAEC19F2BAABFC2007CAA5A /* FeedItem.swift */,
+				BCAEC1A12BAAC056007CAA5A /* FeedLoader.swift */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAEC1A22BAAC056007CAA5A /* FeedLoader.swift in Sources */,
 				BCAEC1A02BAABFC2007CAA5A /* FeedItem.swift in Sources */,
 				BCAEC1882BAABD9A007CAA5A /* EssentialFeed.docc in Sources */,
 			);
