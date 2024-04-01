@@ -7,8 +7,9 @@
 
 import Foundation
 
+// Lesson: restrict result to 2
 public enum HTTPClientResult {
-    case success(HTTPURLResponse)
+    case success(Data, HTTPURLResponse)
     case failure(Error)
 }
 
