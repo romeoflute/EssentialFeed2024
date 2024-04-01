@@ -42,7 +42,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         let clientError = NSError(domain: "Test", code: 0)
         // lesson spy1: call collected completion
-        client.completions[0](clientError)
+        client.complete(with: clientError)
         
         // assert that error is now a connectivity error
         XCTAssertEqual(capturedErrors, [.connectivity])
@@ -65,6 +65,10 @@ class RemoteFeedLoaderTests: XCTestCase {
             completions.append(completion)
             // lesson spy2: spy by collecting urls
             requestedURLs.append(url)
+        }
+        
+        func complete(with error: Error, at index: Int = 0) {
+            completions[index](error)
         }
     }
 }
