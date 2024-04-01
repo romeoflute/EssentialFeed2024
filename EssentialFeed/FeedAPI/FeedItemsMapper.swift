@@ -9,7 +9,7 @@ import Foundation
 
 // Lesson: Decodable belongs to the Feed API and not the Feed Feature for display
 // Lesson: Create a dedicated mapper
-class FeedItemsMapper {
+final class FeedItemsMapper {
     private struct Root: Decodable {
         let items: [Item]
     }
