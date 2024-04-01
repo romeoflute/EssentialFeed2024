@@ -71,6 +71,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         return (sut, client)
     }
     
+    // Lesson: passing parts of a function as a closure (when action param)
     private func expect(_ sut: RemoteFeedLoader, toCompleteWithError error: RemoteFeedLoader.Error, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         // receive error from client through load()
         var capturedErrors = [RemoteFeedLoader.Error]()
