@@ -24,7 +24,7 @@ public final class RemoteFeedLoader {
         self.client = client
     }
     
-    public func load(completion: @escaping (Error) -> Void = { _ in } ) {
+    public func load(completion: @escaping (Error) -> Void) {
         client.get(from: url) { error in
             // map from Swift Error to custom Error
             // lesson: client error should be mapped from Error in API Client to own domain Error in Loader class
