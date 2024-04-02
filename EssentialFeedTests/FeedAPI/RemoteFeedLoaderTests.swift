@@ -154,6 +154,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         let exp = expectation(description: "Wait for load completion")
         
         sut.load { receivedResult in
+            // Lesson: switch tupple pattern matching
             switch (receivedResult, expectedResult) {
             case let (.success(receivedItems), .success(expectedItems)):
                 XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
