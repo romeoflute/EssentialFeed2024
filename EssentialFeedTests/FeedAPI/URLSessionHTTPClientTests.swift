@@ -131,7 +131,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
     
     private func anyData() -> Data {
-        return Data(bytes: "any data".utf8)
+        return Data("any data".utf8)
     }
     
     private func anyNSError() -> NSError {
@@ -158,7 +158,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         
         static func stub(data: Data?, response: URLResponse?, error: Error?) {
             stub = Stub(data: data, response: response, error: error)
-            debugPrint("stub error now: \(stub?.error)")
         }
         
         static func observeRequests(observer: @escaping (URLRequest) -> Void) {
