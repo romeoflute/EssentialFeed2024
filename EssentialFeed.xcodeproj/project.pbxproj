@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		BC06BBE12BBAEDA200EEC471 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		BC06BBE32BBAEEA700EEC471 /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
+		BC3EE8B92BBD0C1A0039B24F /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		BCAEC1832BAABD9A007CAA5A /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAEC1862BAABD9A007CAA5A /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		BCAEC1872BAABD9A007CAA5A /* EssentialFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeed.docc; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		BCAEC1792BAABD9A007CAA5A = {
 			isa = PBXGroup;
 			children = (
+				BC3EE8B92BBD0C1A0039B24F /* CI.xctestplan */,
 				BCBF21C42BBCCE53001A4B7A /* EssentialFeed.xctestplan */,
 				BCAEC1852BAABD9A007CAA5A /* EssentialFeed */,
 				BCAEC1912BAABD9A007CAA5A /* EssentialFeedTests */,
