@@ -7,13 +7,6 @@
 
 import Foundation
 
-struct RemoteFeedItem: Decodable {
-    internal let id: UUID
-    internal let description: String?
-    internal let location: String?
-    internal let image: URL
-}
-
 // Lesson: Decodable belongs to the Feed API and not the Feed Feature for display
 // Lesson: Create a dedicated mapper
 final class FeedItemsMapper {
