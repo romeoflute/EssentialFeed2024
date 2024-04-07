@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Lesson: make properties and functions static as this class does not hold state. It can also be a struct, or an enum without cases
 final class FeedCachePolicy {
     private init() {}
 
