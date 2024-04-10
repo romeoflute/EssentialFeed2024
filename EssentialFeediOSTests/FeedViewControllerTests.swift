@@ -26,11 +26,14 @@ final class FeedViewController: UITableViewController {
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         
-        self.refreshControl?.beginRefreshing()
+        load()
     }
 
 	@objc private func load() {
-        loader?.load { _ in }
+        self.refreshControl?.beginRefreshing()
+        loader?.load { [weak self] _ in
+            self?.refreshControl?.endRefreshing()
+        }
     }
 }
 
@@ -42,11 +45,13 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadCallCount, 0)
     }
     
-    func test_viewDidLoad_loadsFeed() {
+    func test_viewIsAppearing_loadsFeed() {
         let (sut, loader) = makeSUT()
         
         // Lesson: calls viewdidload
 		sut.loadViewIfNeeded()
+        sut.beginAppearanceTransition(true, animated: false)
+        sut.endAppearanceTransition()
 
 		XCTAssertEqual(loader.loadCallCount, 1)
 	}
@@ -77,6 +82,18 @@ final class FeedViewControllerTests: XCTestCase {
         sut.refreshControl?.endRefreshing()
         XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
 	}
+    
+    func test_viewIsAppearing_hidesLoadingIndicatorOnLoaderCompletion() {
+		let (sut, loader) = makeSUT()
+
+		sut.loadViewIfNeeded()
+        sut.beginAppearanceTransition(true, animated: false)
+        sut.endAppearanceTransition()
+        
+		loader.completeFeedLoading()
+
+		XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
+	}
 
     // MARK: - Helpers
     
@@ -89,13 +106,21 @@ final class FeedViewControllerTests: XCTestCase {
 	}
 
     class LoaderSpy: FeedLoader {
-        private(set) var loadCallCount: Int = 0
+        private var completions = [(FeedLoader.Result) -> Void]()
+
+		var loadCallCount: Int {
+			return completions.count
+		}
+
         
         func load(completion: @escaping (FeedLoader.Result) -> Void) {
-			loadCallCount += 1
+            completions.append(completion)
+		}
+        
+        func completeFeedLoading() {
+			completions[0](.success([]))
 		}
     }
-
 }
 
 private extension UIRefreshControl {
