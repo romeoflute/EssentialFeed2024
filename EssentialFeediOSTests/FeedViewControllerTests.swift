@@ -8,40 +8,13 @@
 import XCTest
 import UIKit
 import EssentialFeed
-
-final class FeedViewController: UITableViewController {
-    private var loader: FeedLoader?
-
-	convenience init(loader: FeedLoader) {
-		self.init()
-		self.loader = loader
-	}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        refreshControl = FakeRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-	}
-    
-    override func viewIsAppearing(_ animated: Bool) {
-        super.viewIsAppearing(animated)
-        
-        load()
-    }
-
-	@objc private func load() {
-        refreshControl?.beginRefreshing()
-        loader?.load { [weak self] _ in
-            self?.refreshControl?.endRefreshing()
-        }
-    }
-}
+import EssentialFeediOS
 
 final class FeedViewControllerTests: XCTestCase {
     func test_loadFeedActions_requestFeedFromLoader() {
         let (sut, loader) = makeSUT()
         XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view is loaded")
-
+        
 		sut.loadViewIfNeeded()
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
@@ -59,6 +32,7 @@ final class FeedViewControllerTests: XCTestCase {
 		let (sut, loader) = makeSUT()
 
 		sut.loadViewIfNeeded()
+        sut.refreshControl = sut.createRefreshControlWithFakeForiOS17Support()
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
 
