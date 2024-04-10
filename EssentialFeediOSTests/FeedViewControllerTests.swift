@@ -32,7 +32,7 @@ final class FeedViewControllerTests: XCTestCase {
 		let (sut, loader) = makeSUT()
 
 		sut.loadViewIfNeeded()
-        sut.refreshControl = sut.createRefreshControlWithFakeForiOS17Support()
+        sut.useFakeLoadingFeedIndicator()
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
 
@@ -98,6 +98,10 @@ private extension UIRefreshControl {
 }
 
 private extension FeedViewController {
+    func useFakeLoadingFeedIndicator() {
+        refreshControl = createRefreshControlWithFakeForiOS17Support()
+    }
+    
     func createRefreshControlWithFakeForiOS17Support() -> UIRefreshControl {
         let fake = FakeRefreshControl()
         refreshControl?.allTargets.forEach { target in
