@@ -20,8 +20,14 @@ final class FeedViewController: UITableViewController {
 		super.viewWillAppear(animated)
 
 		refresh()
-		tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
+		
 	}
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        refresh()
+        tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
+    }
 
 	@IBAction func refresh() {
 		refreshControl?.beginRefreshing()
