@@ -14,9 +14,9 @@
             filePath = "EssentialFeediOSTests/FeedViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "completeImageLoading(with:at:)"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "simulateUserInitiatedFeedReload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,10 +46,10 @@
             filePath = "EssentialFeediOSTests/FeedViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
-            landmarkName = "renderedImage"
-            landmarkType = "24">
+            startingLineNumber = "343"
+            endingLineNumber = "343"
+            landmarkName = "FeedImageCell"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
