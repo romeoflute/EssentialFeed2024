@@ -25,7 +25,6 @@ final public class FeedViewController: UITableViewController {
     private var tableModel = [FeedImage]()
     private var tasks = [IndexPath: FeedImageDataLoaderTask]()
 
-
     public convenience init(feedLoader: FeedLoader, imageLoader: FeedImageDataLoader) {
         self.init()
         self.feedLoader = feedLoader
@@ -66,8 +65,12 @@ final public class FeedViewController: UITableViewController {
 		cell.locationContainer.isHidden = (cellModel.location == nil)
 		cell.locationLabel.text = cellModel.location
 		cell.descriptionLabel.text = cellModel.description
+        cell.feedImageView.image = nil
         cell.feedImageContainer.startShimmering()
         tasks[indexPath] = imageLoader?.loadImageData(from: cellModel.url) { [weak cell] result in
+            let data = try? result.get()
+			cell?.feedImageView.image = data.map(UIImage.init) ?? nil
+            cell?.feedImageView.tag = data?.count ?? 0
 			cell?.feedImageContainer.stopShimmering()
 		}
 		return cell
