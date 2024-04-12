@@ -49,6 +49,7 @@
 		BCB102A12BC8B6F600CC049E /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */; };
 		BCB102A32BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */; };
 		BCB102A52BC8C00300CC049E /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A42BC8C00300CC049E /* UIButton+TestHelpers.swift */; };
+		BCB102A72BC8C11600CC049E /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A62BC8C11600CC049E /* UIControl+TestHelpers.swift */; };
 		BCB104292BC7993E00AF7B47 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB104282BC7993E00AF7B47 /* UIView+Shimmering.swift */; };
 		BCB9729C2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9729B2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift */; };
 		BCB9729F2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9729E2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -137,6 +138,7 @@
 		BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		BCB102A42BC8C00300CC049E /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
+		BCB102A62BC8C11600CC049E /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		BCB104282BC7993E00AF7B47 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		BCB9729B2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BCB9729E2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */,
 				BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */,
 				BCB102A42BC8C00300CC049E /* UIButton+TestHelpers.swift */,
+				BCB102A62BC8C11600CC049E /* UIControl+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				BCBDA48D2BC68F3C004173F5 /* FeedViewControllerTests.swift in Sources */,
 				BCB102A52BC8C00300CC049E /* UIButton+TestHelpers.swift in Sources */,
 				BCB102A32BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift in Sources */,
+				BCB102A72BC8C11600CC049E /* UIControl+TestHelpers.swift in Sources */,
 				BCBDA48E2BC69573004173F5 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BCB102A12BC8B6F600CC049E /* UIImage+TestHelpers.swift in Sources */,
 			);
