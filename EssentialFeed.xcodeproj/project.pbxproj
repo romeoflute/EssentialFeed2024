@@ -47,6 +47,7 @@
 		BCAEC1A22BAAC056007CAA5A /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEC1A12BAAC056007CAA5A /* FeedLoader.swift */; };
 		BCAEC1A52BAAC2F4007CAA5A /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEC1A42BAAC2F4007CAA5A /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		BCB102A12BC8B6F600CC049E /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */; };
+		BCB102A32BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */; };
 		BCB104292BC7993E00AF7B47 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB104282BC7993E00AF7B47 /* UIView+Shimmering.swift */; };
 		BCB9729C2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9729B2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift */; };
 		BCB9729F2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9729E2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -133,6 +134,7 @@
 		BCAEC1A12BAAC056007CAA5A /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		BCAEC1A42BAAC2F4007CAA5A /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		BCB104282BC7993E00AF7B47 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		BCB9729B2BBBDF590082F3B4 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BCB9729E2BBC00E80082F3B4 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				BCB102A02BC8B6F600CC049E /* UIImage+TestHelpers.swift */,
+				BCB102A22BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBDA48D2BC68F3C004173F5 /* FeedViewControllerTests.swift in Sources */,
+				BCB102A32BC8BF7700CC049E /* UIRefreshControl+TestHelpers.swift in Sources */,
 				BCBDA48E2BC69573004173F5 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BCB102A12BC8B6F600CC049E /* UIImage+TestHelpers.swift in Sources */,
 			);
