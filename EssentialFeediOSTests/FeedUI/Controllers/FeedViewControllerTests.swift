@@ -15,7 +15,9 @@ final class FeedViewControllerTests: XCTestCase {
         let (sut, loader) = makeSUT()
         XCTAssertEqual(loader.loadFeedCallCount, 0, "Expected no loading requests before view is loaded")
         
-        sut.simulateViewDidLoadThenViewIsAppearing()
+        sut.loadViewIfNeeded()
+        sut.beginAppearanceTransition(true, animated: false)
+        sut.endAppearanceTransition()
         
         XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected a loading request once view is loaded")
         
@@ -30,10 +32,11 @@ final class FeedViewControllerTests: XCTestCase {
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
-        sut.useFakeLoadingFeedIndicator()
+        sut.refreshControl = sut.createRefreshControlWithFakeForiOS17Support()
+        sut.refreshController?.view = sut.refreshControl!
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
-        
+                
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
         
         loader.completeFeedLoading(at: 0)
@@ -138,7 +141,6 @@ final class FeedViewControllerTests: XCTestCase {
 		let (sut, loader) = makeSUT()
 
         sut.loadViewIfNeeded()
-        sut.useFakeLoadingFeedIndicator()
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
 		loader.completeFeedLoading(with: [makeImage(), makeImage()])
@@ -266,10 +268,6 @@ final class FeedViewControllerTests: XCTestCase {
 }
 
 private extension FeedViewController {
-    func useFakeLoadingFeedIndicator() {
-        refreshControl = createRefreshControlWithFakeForiOS17Support()
-    }
-    
     func createRefreshControlWithFakeForiOS17Support() -> UIRefreshControl {
         let fake = FakeRefreshControl()
         refreshControl?.allTargets.forEach { target in
@@ -284,7 +282,9 @@ private extension FeedViewController {
 private class FakeRefreshControl: UIRefreshControl {
     private var _isRefreshing = false
     
-    override var isRefreshing: Bool { _isRefreshing }
+    override var isRefreshing: Bool { 
+        _isRefreshing
+    }
     
     override func beginRefreshing() {
         _isRefreshing = true

@@ -9,12 +9,6 @@ import UIKit
 import EssentialFeediOS
 
 extension FeedViewController {
-    func simulateViewDidLoadThenViewIsAppearing() {
-        loadViewIfNeeded()
-        beginAppearanceTransition(true, animated: false)
-        endAppearanceTransition()
-    }
-    
 	func simulateUserInitiatedFeedReload() {
 		refreshControl?.simulatePullToRefresh()
 	}
