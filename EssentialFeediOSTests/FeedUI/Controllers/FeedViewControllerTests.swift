@@ -34,7 +34,8 @@ final class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         let fakeRefreshControl = sut.createRefreshControlWithFakeForiOS17Support()
         sut.refreshControl = fakeRefreshControl
-        sut.refreshController?.view = sut.refreshController!.binded(fakeRefreshControl)
+        
+        sut.refreshController?.view = fakeRefreshControl
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
                 
