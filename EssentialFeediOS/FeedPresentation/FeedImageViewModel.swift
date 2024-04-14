@@ -9,6 +9,7 @@ struct FeedImageViewModel<Image> {
 	let description: String?
 	let location: String?
 	let image: Image?
+    let bytes: Int?
 	let isLoading: Bool
 	let shouldRetry: Bool
 

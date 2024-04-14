@@ -20,15 +20,6 @@ public final class FeedUIComposer {
 			loadingView: WeakRefVirtualProxy(refreshController))
 		return feedController
 	}
-    
-    private static func adaptFeedToCellControllers(forwardingTo controller: FeedViewController, loader: FeedImageDataLoader) -> ([FeedImage]) -> Void {
-		return { [weak controller] feed in
-			controller?.tableModel = feed.map { model in
-                FeedImageCellController(viewModel:
-					FeedImageViewModel(model: model, imageLoader: loader, imageTransformer: UIImage.init))
-			}
-		}
-	}
 }
 
 // Lesson: https://alfredohdz.medium.com/proxy-design-pattern-f040a6561bfb

@@ -28,6 +28,7 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
 			description: model.description,
 			location: model.location,
 			image: nil,
+            bytes: nil,
 			isLoading: true,
 			shouldRetry: false))
 	}
@@ -43,6 +44,7 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
 			description: model.description,
 			location: model.location,
 			image: image,
+            bytes: data.count,
 			isLoading: false,
 			shouldRetry: false))
 	}
@@ -52,6 +54,7 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
 			description: model.description,
 			location: model.location,
 			image: nil,
+            bytes: nil,
 			isLoading: false,
 			shouldRetry: true))
 	}
