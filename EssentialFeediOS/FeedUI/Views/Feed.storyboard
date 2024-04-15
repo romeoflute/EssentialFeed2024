@@ -80,6 +80,9 @@
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="heavy"/>
                                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="1JJ-Zi-B61" eventType="touchUpInside" id="jli-U7-pze"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,6 +124,14 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="UZd-XM-RtV" secondAttribute="bottom" priority="999" constant="6" id="jBy-nJ-yWw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="II0-9V-HBd" id="Y2m-IG-Ume"/>
+                                    <outlet property="feedImageContainer" destination="aqQ-Fj-CeD" id="gpX-aN-vGg"/>
+                                    <outlet property="feedImageRetryButton" destination="wgt-yX-Q3V" id="pL2-Jm-3In"/>
+                                    <outlet property="feedImageView" destination="Ohh-YU-Njd" id="R22-bS-Ybe"/>
+                                    <outlet property="locationContainer" destination="bds-3O-2xe" id="9SE-Fw-uiQ"/>
+                                    <outlet property="locationLabel" destination="eeQ-5j-tmm" id="3nh-V0-vav"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
