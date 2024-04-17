@@ -39,6 +39,7 @@
 		BC9822072BCFA1BA00BA2420 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9822062BCFA1BA00BA2420 /* FeedPresenter.swift */; };
 		BC9822082BCFA25900BA2420 /* Feed.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BC9822032BCF9FD700BA2420 /* Feed.xcstrings */; };
 		BC98220A2BCFA29A00BA2420 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9822092BCFA29A00BA2420 /* FeedViewModel.swift */; };
+		BC98220C2BCFA2EF00BA2420 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98220B2BCFA2EF00BA2420 /* FeedLoadingViewModel.swift */; };
 		BCA6144E2BC2AB1700234E9A /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6144D2BC2AB1700234E9A /* FeedCachePolicy.swift */; };
 		BCA84B9F2BC3AE9D0052A6AD /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA84B9E2BC3AE9D0052A6AD /* FeedStoreSpecs.swift */; };
 		BCA84BA12BC3AFB10052A6AD /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA84BA02BC3AFB10052A6AD /* XCTestCase+FeedStoreSpecs.swift */; };
@@ -157,6 +158,7 @@
 		BC9822032BCF9FD700BA2420 /* Feed.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Feed.xcstrings; sourceTree = "<group>"; };
 		BC9822062BCFA1BA00BA2420 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		BC9822092BCFA29A00BA2420 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		BC98220B2BCFA2EF00BA2420 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
 		BCA6144D2BC2AB1700234E9A /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		BCA84B9E2BC3AE9D0052A6AD /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		BCA84BA02BC3AFB10052A6AD /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				BC9822032BCF9FD700BA2420 /* Feed.xcstrings */,
 				BC9822062BCFA1BA00BA2420 /* FeedPresenter.swift */,
 				BC9822092BCFA29A00BA2420 /* FeedViewModel.swift */,
+				BC98220B2BCFA2EF00BA2420 /* FeedLoadingViewModel.swift */,
 			);
 			path = FeedPresentation;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				BCB972A32BBC1E940082F3B4 /* URLSessionHTTPClient.swift in Sources */,
 				BC9822072BCFA1BA00BA2420 /* FeedPresenter.swift in Sources */,
 				BCF919AC2BB2899A0046FC06 /* RemoteFeedLoader.swift in Sources */,
+				BC98220C2BCFA2EF00BA2420 /* FeedLoadingViewModel.swift in Sources */,
 				BC06BBE22BBAEDA200EEC471 /* HTTPClient.swift in Sources */,
 				BCA84C042BC3D9CF0052A6AD /* CoreDataHelpers.swift in Sources */,
 				BCAEC1A22BAAC056007CAA5A /* FeedLoader.swift in Sources */,
