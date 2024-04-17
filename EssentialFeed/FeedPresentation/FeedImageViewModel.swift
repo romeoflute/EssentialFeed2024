@@ -11,6 +11,7 @@ public struct FeedImageViewModel<Image> {
 	public let description: String?
 	public let location: String?
 	public let image: Image?
+    public let bytes: Int?
 	public let isLoading: Bool
 	public let shouldRetry: Bool
 
