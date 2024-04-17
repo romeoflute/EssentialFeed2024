@@ -8,7 +8,7 @@
 import Foundation
 
 // Lesson: for display only, not the codable type
-public struct FeedImage: Equatable {
+public struct FeedImage: Hashable {
     public let id: UUID
     public let description: String?
     public let location: String?
