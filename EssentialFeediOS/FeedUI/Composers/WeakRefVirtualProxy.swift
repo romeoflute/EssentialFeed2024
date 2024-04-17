@@ -6,6 +6,7 @@
 //  Lesson: https://alfredohdz.medium.com/proxy-design-pattern-f040a6561bfb
 
 import UIKit
+import EssentialFeed
 
 final class WeakRefVirtualProxy<T: AnyObject> {
 	private weak var object: T?
