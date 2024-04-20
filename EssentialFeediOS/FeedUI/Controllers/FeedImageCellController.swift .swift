@@ -23,6 +23,7 @@ final class FeedImageCellController: FeedImageView {
 
     func view(in tableView: UITableView) -> UITableViewCell {
         cell = tableView.dequeueReusableCell()
+        setAccessibility()
         delegate.didRequestImage()
 		return cell!
 	}
@@ -41,12 +42,16 @@ final class FeedImageCellController: FeedImageView {
 		cell?.locationLabel.text = viewModel.location
 		cell?.descriptionLabel.text = viewModel.description
         cell?.feedImageView.setImageAnimated(viewModel.image)
-        cell?.feedImageView.accessibilityIdentifier = "FeedImage"
         cell?.feedImageView.tag = viewModel.bytes ?? 0
 		cell?.feedImageContainer.isShimmering = viewModel.isLoading
 		cell?.feedImageRetryButton.isHidden = !viewModel.shouldRetry
 		cell?.onRetry = delegate.didRequestImage
 	}
+    
+    private func setAccessibility() {
+        cell?.accessibilityIdentifier = "FeedImageCell"
+        cell?.feedImageView.accessibilityIdentifier = "FeedImageView"
+    }
     
     private func releaseCellForReuse() {
 		cell = nil
